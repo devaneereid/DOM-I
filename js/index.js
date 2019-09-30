@@ -40,3 +40,68 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// **NAV BAR
+const anchorTags = document.querySelectorAll("a");
+anchorTags[0].setAttribute('class', 'nav');
+anchorTags[0].innerText = "Services"
+anchorTags[1].setAttribute('class', 'nav');
+anchorTags[1].innerText = "Product"
+anchorTags[2].setAttribute('class', 'nav');
+anchorTags[2].innerText = "Vision"
+anchorTags[3].setAttribute('class', 'nav');
+anchorTags[3].innerText = "Features"
+anchorTags[4].setAttribute('class', 'nav');
+anchorTags[4].innerText = "About"
+anchorTags[5].setAttribute('class', 'nav');
+anchorTags[5].innerText = "Contact"
+
+anchorTags.forEach( element => {
+  element.style.color= 'green';
+}); 
+
+let anchorAdd = document.querySelector('nav');
+anchorAdd.append("About Us");
+anchorAdd.prepend("Welcome:");
+console.log(anchorAdd.textContent);
+
+
+// **CTA SECTION
+let mainImg = document.querySelector("#cta-img");
+mainImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+let mainTitle = document.querySelector('h1');
+mainTitle.style.whiteSpace = 'pre';
+mainTitle.textContent = 'DOM\nIs\nAwesome';
+
+let button = document.querySelector('button')
+button.textContent = "Get Started"
+
+// **MAIN CONTENT
+let midImg = document.querySelector("#middle-img");
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+let mainContent = document.querySelectorAll('.text-content')
+mainContent[0].querySelector('h4').innerText = siteContent['main-content']['features-h4']
+mainContent[0].querySelector('p').innerText = siteContent['main-content']['features-content']
+mainContent[1].querySelector('h4').innerText = siteContent['main-content']['about-h4']
+mainContent[1].querySelector('p').innerText = siteContent['main-content']['about-content']
+mainContent[2].querySelector('h4').innerText = siteContent['main-content']['services-h4']
+mainContent[2].querySelector('p').innerText = siteContent['main-content']['services-content']
+mainContent[3].querySelector('h4').innerText = siteContent['main-content']['product-h4']
+mainContent[3].querySelector('p').innerText = siteContent['main-content']['product-content']
+mainContent[4].querySelector('h4').innerText = siteContent['main-content']['vision-h4']
+mainContent[4].querySelector('p').innerText = siteContent['main-content']['vision-content']
+
+// **Contact Section
+let contactSection = document.querySelector('section.contact').children;
+contactSection[0].innerText= siteContent.contact['contact-h4'];
+contactSection[1].innerText = siteContent.contact.address;
+contactSection[2].innerText= siteContent.contact.phone;
+contactSection[3].textContent = siteContent.contact.email;
+
+let footer = document.querySelector('footer > p');
+footer.innerText = siteContent.footer.copyright;
+
+
+
