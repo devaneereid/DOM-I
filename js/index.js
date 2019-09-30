@@ -55,9 +55,16 @@ anchorTags[4].setAttribute('class', 'nav');
 anchorTags[4].innerText = "About"
 anchorTags[5].setAttribute('class', 'nav');
 anchorTags[5].innerText = "Contact"
+
 anchorTags.forEach( element => {
   element.style.color= 'green';
 }); 
+
+let anchorAdd = document.querySelector('nav');
+anchorAdd.append("About Us");
+anchorAdd.prepend("Welcome:");
+console.log(anchorAdd.textContent);
+
 
 // **CTA SECTION
 let mainImg = document.querySelector("#cta-img");
