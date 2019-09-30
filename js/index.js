@@ -94,13 +94,14 @@ mainContent[4].querySelector('h4').innerText = siteContent['main-content']['visi
 mainContent[4].querySelector('p').innerText = siteContent['main-content']['vision-content']
 
 // **Contact Section
-let contactSection = document.querySelectorAll(".contact");
-contactSection[0].querySelector('h4').innerHTML = siteContent['contact']['contact-h4']
-contactSection[0].querySelector('p').innerText = siteContent['contact']['address']
-contactSection[1].querySelector('p').innerText = siteContent['contact']['phone']
-contactSection[2].querySelector('p').innerText = siteContent['contact']['address']
+let contactSection = document.querySelector('section.contact').children;
+contactSection[0].innerText= siteContent.contact['contact-h4'];
+contactSection[1].innerText = siteContent.contact.address;
+contactSection[2].innerText= siteContent.contact.phone;
+contactSection[3].textContent = siteContent.contact.email;
 
-let footer = document.getElementById('footer')
-footer.textContent= "Copyright Great Idea! 2018";
-console.log(footer)
+let footer = document.querySelector('footer > p');
+footer.innerText = siteContent.footer.copyright;
+
+
 
